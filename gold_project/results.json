@@ -1,0 +1,1024 @@
+{
+ "raw_shape": [
+  5289,
+  7
+ ],
+ "date_min": "2010-01-04",
+ "date_max": "2026-11-25",
+ "missing_raw": {
+  "Gold": 1038,
+  "Silver": 1039,
+  "Oil": 1038,
+  "USD_Index": 1037,
+  "Yield_10Y": 1040,
+  "VIX": 1036,
+  "SP500": 1038
+ },
+ "duplicated_dates": 0,
+ "duplicated_rows_raw": 1030,
+ "empty_rows": 1031,
+ "empty_rows_sunday": 881,
+ "empty_rows_weekday": 150,
+ "shape_after_drop_empty": [
+  4258,
+  7
+ ],
+ "duplicated_rows_after_drop": 0,
+ "missing_partial": {
+  "Gold": 7,
+  "Silver": 8,
+  "Oil": 7,
+  "USD_Index": 6,
+  "Yield_10Y": 9,
+  "VIX": 5,
+  "SP500": 7
+ },
+ "rows_with_any_missing": 11,
+ "longest_gap": {
+  "Gold": 1,
+  "Silver": 1,
+  "Oil": 1,
+  "USD_Index": 1,
+  "Yield_10Y": 1,
+  "VIX": 1,
+  "SP500": 1
+ },
+ "missing_after_ffill": 0,
+ "nonpositive_counts": {
+  "Gold": 0,
+  "Silver": 0,
+  "Oil": 1,
+  "USD_Index": 0,
+  "Yield_10Y": 0,
+  "VIX": 0,
+  "SP500": 0
+ },
+ "oil_invalid_date": "2020-04-20",
+ "oil_invalid_value": -37.630001068115234,
+ "oil_replaced_by": 18.270000457763672,
+ "clean_shape": [
+  4258,
+  7
+ ],
+ "dtypes": {
+  "Gold": "float64",
+  "Silver": "float64",
+  "Oil": "float64",
+  "USD_Index": "float64",
+  "Yield_10Y": "float64",
+  "VIX": "float64",
+  "SP500": "float64"
+ },
+ "describe": {
+  "Gold": {
+   "count": 4258.0,
+   "mean": 1818.213,
+   "std": 858.857,
+   "min": 1050.8,
+   "25%": 1274.35,
+   "50%": 1570.75,
+   "75%": 1895.4,
+   "max": 5318.4
+  },
+  "Silver": {
+   "count": 4258.0,
+   "mean": 25.638,
+   "std": 13.327,
+   "min": 11.735,
+   "25%": 17.106,
+   "50%": 22.068,
+   "75%": 29.112,
+   "max": 115.08
+  },
+  "Oil": {
+   "count": 4258.0,
+   "mean": 72.278,
+   "std": 20.667,
+   "min": 10.01,
+   "25%": 55.945,
+   "50%": 72.34,
+   "75%": 89.228,
+   "max": 123.7
+  },
+  "USD_Index": {
+   "count": 4258.0,
+   "mean": 93.123,
+   "std": 9.262,
+   "min": 72.93,
+   "25%": 82.922,
+   "50%": 95.705,
+   "75%": 99.59,
+   "max": 114.11
+  },
+  "Yield_10Y": {
+   "count": 4258.0,
+   "mean": 2.711,
+   "std": 1.076,
+   "min": 0.499,
+   "25%": 1.895,
+   "50%": 2.531,
+   "75%": 3.608,
+   "max": 5.311
+  },
+  "VIX": {
+   "count": 4258.0,
+   "mean": 18.421,
+   "std": 6.741,
+   "min": 9.14,
+   "25%": 13.9,
+   "50%": 16.74,
+   "75%": 20.977,
+   "max": 82.69
+  },
+  "SP500": {
+   "count": 4258.0,
+   "mean": 3181.74,
+   "std": 1755.693,
+   "min": 1022.58,
+   "25%": 1859.78,
+   "50%": 2704.685,
+   "75%": 4286.588,
+   "max": 7818.93
+  }
+ },
+ "outliers_levels": {
+  "Gold": {
+   "Q1": 1274.35,
+   "Q3": 1895.4,
+   "lower": 342.775,
+   "upper": 2826.975,
+   "n_low": 0,
+   "n_high": 461,
+   "n_out": 461,
+   "pct_out": 10.827
+  },
+  "Silver": {
+   "Q1": 17.106,
+   "Q3": 29.112,
+   "lower": -0.903,
+   "upper": 47.121,
+   "n_low": 0,
+   "n_high": 285,
+   "n_out": 285,
+   "pct_out": 6.693
+  },
+  "Oil": {
+   "Q1": 55.945,
+   "Q3": 89.228,
+   "lower": 6.021,
+   "upper": 139.151,
+   "n_low": 0,
+   "n_high": 0,
+   "n_out": 0,
+   "pct_out": 0.0
+  },
+  "USD_Index": {
+   "Q1": 82.922,
+   "Q3": 99.59,
+   "lower": 57.921,
+   "upper": 124.591,
+   "n_low": 0,
+   "n_high": 0,
+   "n_out": 0,
+   "pct_out": 0.0
+  },
+  "Yield_10Y": {
+   "Q1": 1.895,
+   "Q3": 3.608,
+   "lower": -0.674,
+   "upper": 6.176,
+   "n_low": 0,
+   "n_high": 0,
+   "n_out": 0,
+   "pct_out": 0.0
+  },
+  "VIX": {
+   "Q1": 13.9,
+   "Q3": 20.977,
+   "lower": 3.284,
+   "upper": 31.594,
+   "n_low": 0,
+   "n_high": 197,
+   "n_out": 197,
+   "pct_out": 4.627
+  },
+  "SP500": {
+   "Q1": 1859.78,
+   "Q3": 4286.588,
+   "lower": -1780.431,
+   "upper": 7926.799,
+   "n_low": 0,
+   "n_high": 0,
+   "n_out": 0,
+   "pct_out": 0.0
+  }
+ },
+ "returns_shape": [
+  4257,
+  7
+ ],
+ "outliers_returns": {
+  "Gold": {
+   "Q1": -0.0047,
+   "Q3": 0.0059,
+   "lower": -0.0207,
+   "upper": 0.0219,
+   "n_low": 141,
+   "n_high": 94,
+   "n_out": 235,
+   "pct_out": 5.5203
+  },
+  "Silver": {
+   "Q1": -0.0091,
+   "Q3": 0.0102,
+   "lower": -0.0382,
+   "upper": 0.0392,
+   "n_low": 161,
+   "n_high": 135,
+   "n_out": 296,
+   "pct_out": 6.9533
+  },
+  "Oil": {
+   "Q1": -0.0119,
+   "Q3": 0.0125,
+   "lower": -0.0485,
+   "upper": 0.0492,
+   "n_low": 118,
+   "n_high": 86,
+   "n_out": 204,
+   "pct_out": 4.7921
+  },
+  "USD_Index": {
+   "Q1": -0.0025,
+   "Q3": 0.0026,
+   "lower": -0.0101,
+   "upper": 0.0102,
+   "n_low": 73,
+   "n_high": 78,
+   "n_out": 151,
+   "pct_out": 3.5471
+  },
+  "SP500": {
+   "Q1": -0.0038,
+   "Q3": 0.0057,
+   "lower": -0.0181,
+   "upper": 0.02,
+   "n_low": 175,
+   "n_high": 104,
+   "n_out": 279,
+   "pct_out": 6.5539
+  },
+  "VIX": {
+   "Q1": -0.0428,
+   "Q3": 0.0353,
+   "lower": -0.16,
+   "upper": 0.1525,
+   "n_low": 66,
+   "n_high": 145,
+   "n_out": 211,
+   "pct_out": 4.9565
+  },
+  "Yield_10Y": {
+   "Q1": -0.031,
+   "Q3": 0.033,
+   "lower": -0.127,
+   "upper": 0.129,
+   "n_low": 59,
+   "n_high": 58,
+   "n_out": 117,
+   "pct_out": 2.7484
+  }
+ },
+ "gold_worst_days": {
+  "2026-01-30": -0.11405996064111967,
+  "2013-04-15": -0.09820579166610166,
+  "2013-06-20": -0.06597613154712167
+ },
+ "gold_best_days": {
+  "2020-03-23": 0.05442181862869511,
+  "2020-03-24": 0.05777508425392419,
+  "2026-02-03": 0.05892644877203068
+ },
+ "skew_table": {
+  "Gold": {
+   "skew_original": 2.103,
+   "skew_log": 1.332
+  },
+  "Silver": {
+   "skew_original": 2.562,
+   "skew_log": 1.183
+  },
+  "Oil": {
+   "skew_original": -0.076,
+   "skew_log": -0.872
+  },
+  "USD_Index": {
+   "skew_original": -0.403,
+   "skew_log": -0.534
+  },
+  "Yield_10Y": {
+   "skew_original": 0.28,
+   "skew_log": -0.801
+  },
+  "VIX": {
+   "skew_original": 2.411,
+   "skew_log": 0.775
+  },
+  "SP500": {
+   "skew_original": 0.888,
+   "skew_log": 0.101
+  }
+ },
+ "log_cols": [
+  "VIX",
+  "SP500"
+ ],
+ "level_features": [
+  "USD_Index",
+  "Yield_10Y",
+  "Log_VIX",
+  "Log_SP500",
+  "Oil"
+ ],
+ "ret_features": [
+  "USD_Index",
+  "Yield_10Y",
+  "VIX",
+  "SP500",
+  "Oil"
+ ],
+ "events": {
+  "2011 peak 2011-08-22": "2011-08-22",
+  "VIX peak (COVID) 2020-03-16": "2020-03-16",
+  "Ukraine invasion 2022-02-24": "2022-02-24",
+  "Highest close 2026-01-29": "2026-01-29"
+ },
+ "gold_max": [
+  "2026-01-29",
+  5318.39990234375
+ ],
+ "gold_min": [
+  "2015-12-17",
+  1050.800048828125
+ ],
+ "gold_first": 1117.699951171875,
+ "gold_last": [
+  "2026-11-25",
+  3573.199951171875
+ ],
+ "vix_max": [
+  "2020-03-16",
+  82.69000244140625
+ ],
+ "gold_peak_2011": [
+  "2011-08-22",
+  1888.699951171875
+ ],
+ "gold_ret_stats": {
+  "mean": 0.0002730064788483147,
+  "std": 0.010952507507427723,
+  "skew": -0.7405225655675459,
+  "excess_kurtosis": 7.35450632517032,
+  "min": -0.11405996064111967,
+  "max": 0.05892644877203068
+ },
+ "gold_ret_shapiro_p": 4.3644595355647085e-39,
+ "annual": {
+  "2010": {
+   "Avg_Gold": 1227.5,
+   "Min_Gold": 1052.2,
+   "Max_Gold": 1421.1,
+   "Year_End": 1421.1,
+   "Change_pct": 27.1,
+   "Volatility_pct": 15.9
+  },
+  "2011": {
+   "Avg_Gold": 1572.1,
+   "Min_Gold": 1318.4,
+   "Max_Gold": 1888.7,
+   "Year_End": 1565.8,
+   "Change_pct": 10.2,
+   "Volatility_pct": 21.2
+  },
+  "2012": {
+   "Avg_Gold": 1668.8,
+   "Min_Gold": 1536.2,
+   "Max_Gold": 1794.1,
+   "Year_End": 1674.8,
+   "Change_pct": 7.0,
+   "Volatility_pct": 16.3
+  },
+  "2013": {
+   "Avg_Gold": 1408.7,
+   "Min_Gold": 1195.0,
+   "Max_Gold": 1692.8,
+   "Year_End": 1201.9,
+   "Change_pct": -28.2,
+   "Volatility_pct": 22.5
+  },
+  "2014": {
+   "Avg_Gold": 1265.8,
+   "Min_Gold": 1142.3,
+   "Max_Gold": 1379.0,
+   "Year_End": 1183.9,
+   "Change_pct": -1.5,
+   "Volatility_pct": 14.2
+  },
+  "2015": {
+   "Avg_Gold": 1158.8,
+   "Min_Gold": 1050.8,
+   "Max_Gold": 1300.7,
+   "Year_End": 1060.3,
+   "Change_pct": -10.4,
+   "Volatility_pct": 14.7
+  },
+  "2016": {
+   "Avg_Gold": 1249.1,
+   "Min_Gold": 1073.9,
+   "Max_Gold": 1364.9,
+   "Year_End": 1150.0,
+   "Change_pct": 8.5,
+   "Volatility_pct": 16.1
+  },
+  "2017": {
+   "Avg_Gold": 1257.7,
+   "Min_Gold": 1160.4,
+   "Max_Gold": 1346.0,
+   "Year_End": 1306.3,
+   "Change_pct": 13.6,
+   "Volatility_pct": 10.4
+  },
+  "2018": {
+   "Avg_Gold": 1267.9,
+   "Min_Gold": 1176.2,
+   "Max_Gold": 1362.4,
+   "Year_End": 1278.3,
+   "Change_pct": -2.1,
+   "Volatility_pct": 10.5
+  },
+  "2019": {
+   "Avg_Gold": 1392.7,
+   "Min_Gold": 1269.3,
+   "Max_Gold": 1550.3,
+   "Year_End": 1519.5,
+   "Change_pct": 18.9,
+   "Volatility_pct": 11.5
+  },
+  "2020": {
+   "Avg_Gold": 1776.8,
+   "Min_Gold": 1477.3,
+   "Max_Gold": 2069.4,
+   "Year_End": 1895.1,
+   "Change_pct": 24.7,
+   "Volatility_pct": 21.7
+  },
+  "2021": {
+   "Avg_Gold": 1798.9,
+   "Min_Gold": 1678.0,
+   "Max_Gold": 1954.4,
+   "Year_End": 1828.6,
+   "Change_pct": -3.5,
+   "Volatility_pct": 15.0
+  },
+  "2022": {
+   "Avg_Gold": 1805.2,
+   "Min_Gold": 1630.9,
+   "Max_Gold": 2043.3,
+   "Year_End": 1826.2,
+   "Change_pct": -0.1,
+   "Volatility_pct": 15.7
+  },
+  "2023": {
+   "Avg_Gold": 1954.5,
+   "Min_Gold": 1817.1,
+   "Max_Gold": 2093.1,
+   "Year_End": 2071.8,
+   "Change_pct": 13.4,
+   "Volatility_pct": 13.4
+  },
+  "2024": {
+   "Avg_Gold": 2404.7,
+   "Min_Gold": 2004.3,
+   "Max_Gold": 2800.8,
+   "Year_End": 2641.0,
+   "Change_pct": 27.5,
+   "Volatility_pct": 15.3
+  },
+  "2025": {
+   "Avg_Gold": 3465.7,
+   "Min_Gold": 2647.4,
+   "Max_Gold": 4552.7,
+   "Year_End": 4341.1,
+   "Change_pct": 64.4,
+   "Volatility_pct": 20.9
+  },
+  "2026": {
+   "Avg_Gold": 4467.0,
+   "Min_Gold": 3515.4,
+   "Max_Gold": 5318.4,
+   "Year_End": 3573.2,
+   "Change_pct": -17.7,
+   "Volatility_pct": 29.8
+  }
+ },
+ "gs_ratio": {
+  "mean": 73.20873491458671,
+  "min": 31.99507845731254,
+  "max": 125.88837597345282,
+  "max_date": "2020-03-18",
+  "min_date": "2011-04-25",
+  "last": 87.08749835437133
+ },
+ "corr_gold_silver_level": 0.8934774451690927,
+ "ttest_vix": {
+  "n_high": 1225,
+  "n_low": 3032,
+  "mean_high": 0.0005804742235551945,
+  "mean_low": 0.00014878220864187412,
+  "std_high": 0.013064510604258934,
+  "std_low": 0.009972944384198176,
+  "t": 1.0404933520606714,
+  "p": 0.29824840051812346
+ },
+ "levene_vix": {
+  "stat": 73.48313144818276,
+  "p": 1.400809267802457e-17
+ },
+ "pearson_levels": {
+  "Gold": {
+   "Gold": 1.0,
+   "Silver": 0.893,
+   "Oil": 0.132,
+   "USD_Index": 0.363,
+   "Yield_10Y": 0.582,
+   "VIX": 0.081,
+   "SP500": 0.863
+  },
+  "Silver": {
+   "Gold": 0.893,
+   "Silver": 1.0,
+   "Oil": 0.316,
+   "USD_Index": 0.017,
+   "Yield_10Y": 0.47,
+   "VIX": 0.051,
+   "SP500": 0.603
+  },
+  "Oil": {
+   "Gold": 0.132,
+   "Silver": 0.316,
+   "Oil": 1.0,
+   "USD_Index": -0.426,
+   "Yield_10Y": 0.35,
+   "VIX": -0.069,
+   "SP500": -0.037
+  },
+  "USD_Index": {
+   "Gold": 0.363,
+   "Silver": 0.017,
+   "Oil": -0.426,
+   "USD_Index": 1.0,
+   "Yield_10Y": 0.35,
+   "VIX": 0.006,
+   "SP500": 0.692
+  },
+  "Yield_10Y": {
+   "Gold": 0.582,
+   "Silver": 0.47,
+   "Oil": 0.35,
+   "USD_Index": 0.35,
+   "Yield_10Y": 1.0,
+   "VIX": -0.16,
+   "SP500": 0.582
+  },
+  "VIX": {
+   "Gold": 0.081,
+   "Silver": 0.051,
+   "Oil": -0.069,
+   "USD_Index": 0.006,
+   "Yield_10Y": -0.16,
+   "VIX": 1.0,
+   "SP500": -0.008
+  },
+  "SP500": {
+   "Gold": 0.863,
+   "Silver": 0.603,
+   "Oil": -0.037,
+   "USD_Index": 0.692,
+   "Yield_10Y": 0.582,
+   "VIX": -0.008,
+   "SP500": 1.0
+  }
+ },
+ "spearman_levels": {
+  "Gold": {
+   "Gold": 1.0,
+   "Silver": 0.799,
+   "Oil": 0.24,
+   "USD_Index": 0.413,
+   "Yield_10Y": 0.326,
+   "VIX": 0.276,
+   "SP500": 0.714
+  },
+  "Silver": {
+   "Gold": 0.799,
+   "Silver": 1.0,
+   "Oil": 0.518,
+   "USD_Index": -0.046,
+   "Yield_10Y": 0.306,
+   "VIX": 0.223,
+   "SP500": 0.276
+  },
+  "Oil": {
+   "Gold": 0.24,
+   "Silver": 0.518,
+   "Oil": 1.0,
+   "USD_Index": -0.311,
+   "Yield_10Y": 0.35,
+   "VIX": 0.058,
+   "SP500": -0.191
+  },
+  "USD_Index": {
+   "Gold": 0.413,
+   "Silver": -0.046,
+   "Oil": -0.311,
+   "USD_Index": 1.0,
+   "Yield_10Y": 0.41,
+   "VIX": -0.004,
+   "SP500": 0.783
+  },
+  "Yield_10Y": {
+   "Gold": 0.326,
+   "Silver": 0.306,
+   "Oil": 0.35,
+   "USD_Index": 0.41,
+   "Yield_10Y": 1.0,
+   "VIX": -0.063,
+   "SP500": 0.374
+  },
+  "VIX": {
+   "Gold": 0.276,
+   "Silver": 0.223,
+   "Oil": 0.058,
+   "USD_Index": -0.004,
+   "Yield_10Y": -0.063,
+   "VIX": 1.0,
+   "SP500": 0.015
+  },
+  "SP500": {
+   "Gold": 0.714,
+   "Silver": 0.276,
+   "Oil": -0.191,
+   "USD_Index": 0.783,
+   "Yield_10Y": 0.374,
+   "VIX": 0.015,
+   "SP500": 1.0
+  }
+ },
+ "pearson_returns": {
+  "Gold": {
+   "Gold": 1.0,
+   "Silver": 0.791,
+   "Oil": 0.096,
+   "USD_Index": -0.354,
+   "SP500": 0.07,
+   "VIX": -0.03,
+   "Yield_10Y": -0.222
+  },
+  "Silver": {
+   "Gold": 0.791,
+   "Silver": 1.0,
+   "Oil": 0.156,
+   "USD_Index": -0.322,
+   "SP500": 0.182,
+   "VIX": -0.133,
+   "Yield_10Y": -0.082
+  },
+  "Oil": {
+   "Gold": 0.096,
+   "Silver": 0.156,
+   "Oil": 1.0,
+   "USD_Index": -0.091,
+   "SP500": 0.236,
+   "VIX": -0.164,
+   "Yield_10Y": 0.194
+  },
+  "USD_Index": {
+   "Gold": -0.354,
+   "Silver": -0.322,
+   "Oil": -0.091,
+   "USD_Index": 1.0,
+   "SP500": -0.179,
+   "VIX": 0.104,
+   "Yield_10Y": 0.167
+  },
+  "SP500": {
+   "Gold": 0.07,
+   "Silver": 0.182,
+   "Oil": 0.236,
+   "USD_Index": -0.179,
+   "SP500": 1.0,
+   "VIX": -0.764,
+   "Yield_10Y": 0.24
+  },
+  "VIX": {
+   "Gold": -0.03,
+   "Silver": -0.133,
+   "Oil": -0.164,
+   "USD_Index": 0.104,
+   "SP500": -0.764,
+   "VIX": 1.0,
+   "Yield_10Y": -0.212
+  },
+  "Yield_10Y": {
+   "Gold": -0.222,
+   "Silver": -0.082,
+   "Oil": 0.194,
+   "USD_Index": 0.167,
+   "SP500": 0.24,
+   "VIX": -0.212,
+   "Yield_10Y": 1.0
+  }
+ },
+ "gold_ret_corr_tests": {
+  "Silver": {
+   "r": 0.7905903566718219,
+   "p": 0.0
+  },
+  "USD_Index": {
+   "r": -0.3540953272691761,
+   "p": 5.68486148208876e-126
+  },
+  "Yield_10Y": {
+   "r": -0.2218721781804371,
+   "p": 1.2520878458818635e-48
+  },
+  "VIX": {
+   "r": -0.030071662252617575,
+   "p": 0.04977252031578323
+  },
+  "SP500": {
+   "r": 0.07010435009678738,
+   "p": 4.687773807753064e-06
+  },
+  "Oil": {
+   "r": 0.096063339948957,
+   "p": 3.3768821805302997e-10
+  }
+ },
+ "rolling_corr": {
+  "USD_Index": {
+   "min": -0.6585804395496869,
+   "max": -0.11532594723932416,
+   "mean": -0.39245859482543854
+  },
+  "SP500": {
+   "min": -0.33309787003829827,
+   "max": 0.4041638857997586,
+   "mean": 0.013620361701110742
+  },
+  "Yield_10Y": {
+   "min": -0.6152515189370081,
+   "max": 0.135605981486893,
+   "mean": -0.27102253489010625
+  }
+ },
+ "split_level": {
+  "train": 3406,
+  "test": 852,
+  "train_start": "2010-01-04",
+  "train_end": "2023-07-14",
+  "test_start": "2023-07-17",
+  "test_end": "2026-11-25",
+  "train_gold_min": 1050.800048828125,
+  "train_gold_max": 2069.39990234375,
+  "test_gold_min": 1831.800048828125,
+  "test_gold_max": 5318.39990234375,
+  "test_share_above_train_max": 0.8215962441314554
+ },
+ "split_ret": {
+  "train": 3405,
+  "test": 852,
+  "train_start": "2010-01-05",
+  "train_end": "2023-07-14",
+  "test_start": "2023-07-17",
+  "test_end": "2026-11-25"
+ },
+ "perf_level": {
+  "Linear Regression": {
+   "train": {
+    "RMSE": 150.6035517487969,
+    "MAE": 118.18139485803476,
+    "R2": 0.6727981070138915,
+    "MAPE": 0.08014616717989916
+   },
+   "test": {
+    "RMSE": 1834.3781644649807,
+    "MAE": 1601.0127475280894,
+    "R2": -2.454597141975172,
+    "MAPE": 0.4574945252535272
+   }
+  },
+  "Random Forest": {
+   "train": {
+    "RMSE": 7.660209106547745,
+    "MAE": 5.113962982112026,
+    "R2": 0.9991535006491414,
+    "MAPE": 0.0034432506514040563
+   },
+   "test": {
+    "RMSE": 1629.651759611279,
+    "MAE": 1319.1884190399694,
+    "R2": -1.7265237492823506,
+    "MAPE": 0.35440638901602534
+   }
+  },
+  "Gradient Boosting": {
+   "train": {
+    "RMSE": 34.36974250107859,
+    "MAE": 26.53184023394994,
+    "R2": 0.9829588877918912,
+    "MAPE": 0.018342888902779925
+   },
+   "test": {
+    "RMSE": 1632.518703077586,
+    "MAE": 1311.7768605551998,
+    "R2": -1.73612538987177,
+    "MAPE": 0.35022515975612806
+   }
+  }
+ },
+ "max_pred_level": {
+  "Linear Regression": 2020.1468012939915,
+  "Random Forest": 1959.1163321940105,
+  "Gradient Boosting": 1999.170189567871
+ },
+ "perf_return": {
+  "Linear Regression": {
+   "train": {
+    "RMSE": 0.009184243023915498,
+    "MAE": 0.006383810442555836,
+    "R2": 0.191208269056097
+   },
+   "test": {
+    "RMSE": 0.012848860634313187,
+    "MAE": 0.008893840559020502,
+    "R2": 0.09385915959214564,
+    "Direction_acc": 0.613849765258216
+   },
+   "cv_r2_mean": 0.14955829488074332,
+   "cv_r2_std": 0.15999690320442844
+  },
+  "Random Forest": {
+   "train": {
+    "RMSE": 0.003551702660573724,
+    "MAE": 0.002473573475361195,
+    "R2": 0.879045182784468
+   },
+   "test": {
+    "RMSE": 0.01309813915286124,
+    "MAE": 0.009211177304653028,
+    "R2": 0.05835833252556466,
+    "Direction_acc": 0.5997652582159625
+   },
+   "cv_r2_mean": -0.022167463980218717,
+   "cv_r2_std": 0.16510176186856912
+  },
+  "Gradient Boosting": {
+   "train": {
+    "RMSE": 0.008018126100209529,
+    "MAE": 0.00580741817165578,
+    "R2": 0.38355301555843446
+   },
+   "test": {
+    "RMSE": 0.012979515235446387,
+    "MAE": 0.008942590131813763,
+    "R2": 0.07533714278095749,
+    "Direction_acc": 0.6185446009389671
+   },
+   "cv_r2_mean": -0.03130679501406599,
+   "cv_r2_std": 0.1786486854055304
+  }
+ },
+ "random_split_level": {
+  "Linear Regression": {
+   "R2": 0.7855046503649002,
+   "RMSE": 401.9937749811559
+  },
+  "Random Forest": {
+   "R2": 0.9923353614893037,
+   "RMSE": 75.98996175660446
+  },
+  "Gradient Boosting": {
+   "R2": 0.9913887831721839,
+   "RMSE": 80.54575372235388
+  }
+ },
+ "importance_level": {
+  "coef_std": {
+   "USD_Index": -38.519,
+   "Yield_10Y": -86.209,
+   "Log_VIX": 102.905,
+   "Log_SP500": 177.993,
+   "Oil": 131.954
+  },
+  "rf": {
+   "USD_Index": 0.057,
+   "Yield_10Y": 0.172,
+   "Log_VIX": 0.017,
+   "Log_SP500": 0.706,
+   "Oil": 0.048
+  },
+  "gb": {
+   "USD_Index": 0.059,
+   "Yield_10Y": 0.165,
+   "Log_VIX": 0.015,
+   "Log_SP500": 0.684,
+   "Oil": 0.077
+  }
+ },
+ "permutation_return": {
+  "Linear Regression": {
+   "mean": {
+    "USD_Index": 0.1173,
+    "Yield_10Y": 0.0357,
+    "VIX": -0.004,
+    "SP500": 0.0062,
+    "Oil": 0.0065
+   },
+   "std": {
+    "USD_Index": 0.0141,
+    "Yield_10Y": 0.0108,
+    "VIX": 0.0009,
+    "SP500": 0.0008,
+    "Oil": 0.0059
+   }
+  },
+  "Random Forest": {
+   "mean": {
+    "USD_Index": 0.1294,
+    "Yield_10Y": 0.0587,
+    "VIX": 0.02,
+    "SP500": 0.0031,
+    "Oil": 0.0132
+   },
+   "std": {
+    "USD_Index": 0.0206,
+    "Yield_10Y": 0.0201,
+    "VIX": 0.0104,
+    "SP500": 0.0088,
+    "Oil": 0.0079
+   }
+  },
+  "Gradient Boosting": {
+   "mean": {
+    "USD_Index": 0.1194,
+    "Yield_10Y": 0.0319,
+    "VIX": 0.0044,
+    "SP500": 0.0068,
+    "Oil": 0.0198
+   },
+   "std": {
+    "USD_Index": 0.0129,
+    "Yield_10Y": 0.0139,
+    "VIX": 0.0052,
+    "SP500": 0.0071,
+    "Oil": 0.0078
+   }
+  }
+ },
+ "coef_return_std": {
+  "USD_Index": -0.00322,
+  "Yield_10Y": -0.0024,
+  "VIX": 0.00024,
+  "SP500": 0.00027,
+  "Oil": 0.00137
+ },
+ "vif_level": {
+  "USD_Index": 4.81,
+  "Yield_10Y": 1.71,
+  "Log_VIX": 1.04,
+  "Log_SP500": 3.31,
+  "Oil": 2.47
+ },
+ "ols_level": {
+  "r2_train": 0.6727981070138918,
+  "adj_r2_train": 0.6723169277595005,
+  "coef": {
+   "const": -2459.398,
+   "USD_Index": -4.302,
+   "Yield_10Y": -112.336,
+   "Log_VIX": 312.256,
+   "Log_SP500": 421.949,
+   "Oil": 5.926
+  },
+  "pvalues": {
+   "const": 2.317358793162305e-303,
+   "USD_Index": 1.2197492163991528e-11,
+   "Yield_10Y": 9.946670770512818e-132,
+   "Log_VIX": 4.90856034654259e-277,
+   "Log_SP500": 2.59118079380649e-262,
+   "Oil": 3.513865608574014e-202
+  },
+  "durbin_watson": 0.028266843913292483
+ }
+}

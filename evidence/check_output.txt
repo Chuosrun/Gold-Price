@@ -1,0 +1,18 @@
+non-keyboard chars: {}
+0 ' '
+1 ' '
+2 ' '
+3 ' '
+4 'What Drives the Gold Price? A Data Analysis of Market Factors, 2010-2026'
+5 ''
+6 'Course: Data Analysis 1'
+7 'Lecturer: Dr. HAS Sothea '
+8 ''
+9 'Semester: [Semester/Year]'
+10 'Team Members: Lim Chuosrun (2024588)'
+11 ''
+12 'Date: [Submission Date]'
+13 ''
+paragraphs 144 words 4148 inline images 18 tables 6
+flag words: {}
+placeholders: ['[Semester/Year]', '[Submission Date]', '[1]', '[2]', '[3]', '[4]', '[5]', '[6]', '[7]', '[8]', '[9]']
