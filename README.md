@@ -33,7 +33,7 @@ The full report is in **`Final_Project_Report_Gold_Price_Simple.docx`** (17 page
 - **Market fear (VIX) does not change the average gold return** (t-test p = 0.30, chi-square p = 0.14).
 - **The average daily return is not clearly different from 0** (z = 1.63, p = 0.10).
 - **Correlation on price levels can lie.** Gold vs S&P 500 is r = 0.86 on price levels, but only r = 0.07 on daily changes, because both just trended up.
-- **The models learn a little, not a lot.** Multiple regression has a test R2 of about 0.09. Logistic regression gets 61.9% accuracy against a 54.3% baseline (AUC 0.68).
+- **The models learn a little, not a lot.** Multiple regression has a test R2 of about 0.09, and the simple regression on the dollar alone is slightly better (0.11) when both are fitted on the same training set. Logistic regression gets 61.9% accuracy against a 54.3% baseline (AUC 0.68).
 - The models use the other markets' changes on the **same day**, so they explain a day but do not forecast tomorrow.
 
 ## Folder structure

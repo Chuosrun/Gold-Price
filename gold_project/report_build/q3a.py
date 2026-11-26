@@ -27,7 +27,7 @@ def q3a(c):
     c.sub(f"**Is it normal?** We turned each daily return into a z-score. {pct(N['share_within1'])} of the days are within 1 standard deviation (a normal curve gives 68%) and {pct(N['share_within2'])} are within 2 (normal gives 95%), "
           f"so the middle looks normal. But the tails are heavy: {N['n_beyond3']} days are beyond 3 standard deviations, and a normal curve would give only about {N['expected_beyond3']:.0f}. "
           f"The worst day ({N['worst_day']}) has z = {N['worst_z']:.1f}, which a normal curve says should almost never happen. So we should not trust the normal curve for the extreme days.")
-    c.table("Gold by year (USD per ounce). Change is from the previous year end (2026 is up to 2026-11-25). Volatility is the yearly standard deviation of daily returns.",
+    c.table("Gold by year (USD per ounce). Change is from the previous year end (2026 is up to 2026-11-25). Volatility is the annualized volatility: the standard deviation of that year's daily log returns times the square root of 252 trading days.",
             ["Year", "Average", "Min", "Max", "Change", "Volatility"],
             [[y, n0(v["Avg_Gold"]), n0(v["Min_Gold"]), n0(v["Max_Gold"]), f"{v['Change_pct']:+.1f}%", f"{v['Volatility_pct']:.1f}%"] for y, v in an.items()],
             widths=[0.8, 1.1, 1.1, 1.1, 1.1, 1.1], size=9)

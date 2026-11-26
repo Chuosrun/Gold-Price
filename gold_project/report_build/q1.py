@@ -42,8 +42,8 @@ def q2b(c):
           "The other four variables have none. The gold outliers (above 2,827 USD) are all from **2025 and 2026**, so they come from the recent rally and are not mistakes.")
     c.figure("fig02_boxplots_levels", "Boxplots of the 7 price series.", max_w=6.2)
     c.sub(f"**Daily changes (Figure {c.fno('fig03_boxplots_returns')}):** every series has between {orr['Yield_10Y']['pct_out']:.1f}% and {orr['Silver']['pct_out']:.1f}% outliers. "
-          "The worst gold days are 2026-01-30 (-11.4%, gold fell from 5,318 to 4,745 USD while silver fell from 114 to 78 USD the same day), "
-          "2013-04-15 (-9.8%) and 2013-06-20 (-6.6%). The best days are 2026-02-03 (+5.9%) and 2020-03-23 and 24. These are real market events, not typing mistakes.")
+          "The worst gold days are 2026-01-30 (-11.4% log return, which is about -10.8% as a simple price drop: gold fell from 5,318 to 4,745 USD while silver fell from 114 to 78 USD the same day), "
+          "2013-04-15 (-9.8%) and 2013-06-20 (-6.6%). The best days are 2026-02-03 (+5.9%) and 2020-03-23 and 24. All the daily percentages in this paragraph are log returns. These are real market events, not typing mistakes.")
     c.figure("fig03_boxplots_returns", "Boxplots of the daily changes.", max_w=6.2)
     c.sub("**Decision:** we **kept** the outliers. If we removed them we would delete exactly the crises and the rally that we want to study, "
           "and a price that was cut is not a real price anymore.")

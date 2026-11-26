@@ -179,6 +179,14 @@ Xs = (X_tr - X_tr.mean()) / X_tr.std()
 RES["mlr"]["std_coef"] = sm.OLS(y_tr, sm.add_constant(Xs)).fit().params.drop("const").to_dict()
 print(RES["mlr"])
 
+# fair comparison: the simple regression (USD index only) fitted on the SAME training set as the multiple regression
+slr = sm.OLS(y_tr, sm.add_constant(X_tr[["USD_Index"]])).fit()
+pred_s = slr.predict(sm.add_constant(X_te[["USD_Index"]]))
+RES["simple_reg_train"] = {"intercept": float(slr.params["const"]), "slope": float(slr.params["USD_Index"]),
+                           "r2_train": float(slr.rsquared), "rmse_test": float(np.sqrt(mean_squared_error(y_te, pred_s))),
+                           "mae_test": float(mean_absolute_error(y_te, pred_s)), "r2_test": float(r2_score(y_te, pred_s))}
+print(RES["simple_reg_train"])
+
 plt.figure(figsize=(6.5, 5))
 plt.scatter(y_te, pred, s=8, alpha=0.5)
 lim = [float(y_te.min()), float(y_te.max())]

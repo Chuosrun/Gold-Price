@@ -13,6 +13,6 @@ non-keyboard chars: {}
 11 ''
 12 'Date: [Submission Date]'
 13 ''
-paragraphs 144 words 4148 inline images 18 tables 6
+paragraphs 144 words 4307 inline images 18 tables 6
 flag words: {}
 placeholders: ['[Semester/Year]', '[Submission Date]', '[1]', '[2]', '[3]', '[4]', '[5]', '[6]', '[7]', '[8]', '[9]']

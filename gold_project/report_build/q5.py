@@ -3,25 +3,28 @@ from q4 import *
 
 def q5(c):
     f = c.fno
-    SR, M, LG = S["simple_reg_all"], S["mlr"], S["logit"]
+    SR, M, LG, ST = S["simple_reg_all"], S["mlr"], S["logit"], S["simple_reg_train"]
     cm = LG["cm"]
     names = {"USD_Index": "USD Index", "Yield_10Y": "Yield 10Y", "VIX": "VIX", "SP500": "S&P 500", "Oil": "Oil"}
     c.heading("V")
     c.para("We compare the models on the test set, which they did not see during training.")
     c.bullet("Performance Metrics:", "For the regression models we use RMSE, MAE and R2. R2 near 0 means the model explains almost nothing. For logistic regression we use accuracy, precision, recall, F1 and AUC.")
-    c.table("Regression results on the daily gold return (test set, 852 days).", ["Model", "RMSE", "MAE", "Test R2"],
-            [["Always predict the training mean (baseline)", f"{M['rmse_baseline']:.5f}", "-", "about 0"],
-             ["Multiple linear regression (5 drivers)", f"{M['rmse_test']:.5f}", f"{M['mae_test']:.5f}", f"{M['r2_test']:.3f}"]],
-            widths=[3.2, 1.1, 1.1, 1.1])
+    c.table("Regression results on the daily gold return. All models are fitted on the same training set and tested on the same 852 test days.",
+            ["Model", "Train R2", "Test RMSE", "Test MAE", "Test R2"],
+            [["Always predict the training mean (baseline)", "0", f"{M['rmse_baseline']:.5f}", "-", "about 0"],
+             ["Simple linear regression (USD index only)", f"{ST['r2_train']:.3f}", f"{ST['rmse_test']:.5f}", f"{ST['mae_test']:.5f}", f"{ST['r2_test']:.3f}"],
+             ["Multiple linear regression (5 drivers)", f"{M['r2_train']:.3f}", f"{M['rmse_test']:.5f}", f"{M['mae_test']:.5f}", f"{M['r2_test']:.3f}"]],
+            widths=[2.9, 0.9, 1.0, 1.0, 0.9], size=9)
     c.table("Logistic regression results (test set, 852 days).", ["Accuracy", "Precision", "Recall", "F1", "AUC", "Baseline accuracy"],
             [[f"{LG['accuracy']:.3f}", f"{LG['precision']:.3f}", f"{LG['recall']:.3f}", f"{LG['f1']:.3f}", f"{LG['auc']:.3f}", f"{LG['baseline_acc']:.3f}"]],
             widths=[1.0, 1.0, 1.0, 0.8, 0.8, 1.5], aligns=["c"] * 6)
     c.bullet("Comparison of models' performance:", "")
-    c.sub(f"**Linear regression:** the multiple regression has a test R2 of {M['r2_test']:.3f}. Its RMSE ({M['rmse_test']:.5f}) is lower than the baseline ({M['rmse_baseline']:.5f}), "
-          "so it is better than guessing the average, but only by a small margin. "
-          f"So the 5 drivers explain about {M['r2_test']*100:.0f}% of the movement of gold on a day in the test period, and the rest comes from things we did not include. "
-          f"On the training set R2 is {M['r2_train']:.3f}, compared with {SR['r2']:.3f} for the USD index alone, so the other drivers add a little. "
-          f"The test R2 is lower than the training R2 ({M['r2_test']:.3f} vs {M['r2_train']:.3f}). Part of the reason is that the test years (2023-2026) were more volatile than the training years, "
+    c.sub(f"**Linear regression:** both regressions beat the baseline, but only by a small margin (RMSE {M['rmse_baseline']:.5f} for the baseline). "
+          f"The multiple regression has a test R2 of {M['r2_test']:.3f}, so the 5 drivers explain about {M['r2_test']*100:.0f}% of the movement of gold on a day in the test period. "
+          f"On the training set the 5 drivers fit better than the dollar alone (R2 = {M['r2_train']:.3f} vs {ST['r2_train']:.3f}), but on the test set the **simple regression is slightly better** "
+          f"(test R2 = {ST['r2_test']:.3f} vs {M['r2_test']:.3f}, RMSE {ST['rmse_test']:.5f} vs {M['rmse_test']:.5f}). "
+          "So the extra four variables do not help on new data. This fits the EDA and the coefficient table below, where the dollar is the one variable that really matters. "
+          "Both test R2 values are lower than the multiple regression's training R2, partly because the test years (2023-2026) were more volatile than the training years, "
           "so the relationships were not exactly the same.")
     c.sub(f"**Logistic regression:** the accuracy is {pct(LG['accuracy'])} on the test set. The confusion matrix shows {cm[0][0]} days correct for down and {cm[1][1]} correct for up, with {cm[0][1]} false up and {cm[1][0]} false down. "
           f"Precision is {pct(LG['precision'])} and recall is {pct(LG['recall'])}. The AUC is {LG['auc']:.3f}, which is above 0.5 (random guessing) but not high. "

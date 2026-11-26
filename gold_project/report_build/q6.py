@@ -2,7 +2,7 @@ from q1 import *
 
 
 def q6(c):
-    SR, M, LG, T2 = S["simple_reg_all"], S["mlr"], S["logit"], S["ttest_usd"]
+    SR, M, LG, T2, ST = S["simple_reg_all"], S["mlr"], S["logit"], S["ttest_usd"], S["simple_reg_train"]
     c.heading("VI")
     c.para("In short, a few market numbers explain only a small part of what gold does on a normal day, but the results are clear about which ones matter.")
     c.bullet("Key Findings:", "")
@@ -13,11 +13,11 @@ def q6(c):
     c.sub("**2. Stock market fear does not matter on average.** Stress days (VIX above 20) do not have a different average gold return from calm days (t-test p = 0.30, chi-square p = 0.14). "
           "Gold is not a sure hedge on a single day.")
     c.sub("**3. Correlation on price levels can lie.** Gold and the S&P 500 have r = 0.86 on price levels, but only r = 0.07 on daily changes. Both just trended up for 16 years.")
-    c.sub(f"**4. The models learn a little, not a lot.** Multiple regression has a test R2 of {M['r2_test']:.2f}, and logistic regression has {pct(LG['accuracy'], 0)} accuracy against a {pct(LG['baseline_acc'], 0)} baseline (AUC {LG['auc']:.2f}). "
+    c.sub(f"**4. The models learn a little, not a lot.** Multiple regression has a test R2 of {M['r2_test']:.2f}, and the simple regression on the dollar alone does slightly better ({ST['r2_test']:.2f}). Logistic regression has {pct(LG['accuracy'], 0)} accuracy against a {pct(LG['baseline_acc'], 0)} baseline (AUC {LG['auc']:.2f}). "
           "So the drivers explain less than 10% of the size of a gold move and give a small edge on the direction.")
     c.bullet("Implications:", "")
     c.sub("**For investors:** watching the dollar and the US yield gives a better view of gold's day-to-day moves than watching the stock market or the VIX. But these numbers are not enough to time gold, "
-          "and big daily drops do happen (the worst was -11.4% in one day).")
+          "and big daily drops do happen (the worst was -11.4% in log return, about -10.8% in price, in one day).")
     c.sub("**For students and analysts:** use the daily changes and not the price levels when two series trend, and always compare a model with a simple baseline before saying it is good.")
     c.bullet("Limitations & Future Work:", "")
     c.sub("**Data:** only 5 drivers and daily closing prices. We did not include inflation, real interest rates, central bank gold buying or ETF flows, which many people think matter, because we could not download them easily. "
